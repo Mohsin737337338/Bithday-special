@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohsin's Special Message</title>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Merriweather:wght@300;400;700&family=Montserrat:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">Mohsin's Special Message</div>
+  </header>
+
+  <main>
+    <!-- Page 1: Landing -->
+    <section class="page page-1 active" id="page1">
+      <div class="center">
+        <div class="icon-circle">
+          <!-- envelope with heart -->
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="5" width="20" height="14" rx="3" fill="#fff" />
+            <path d="M2 7L12 13L22 7" stroke="#D8B8FF" stroke-width="1.2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <circle cx="12" cy="9.5" r="3" fill="#E6B8FF" />
+            <path d="M11.2 9.4c0-.6.5-.9.8-1 .6-.3 1.4.1 1.5.7.1.6-.1 1.1-.6 1.5-.6.5-1.6.8-1.7.5-.1-.4-.8-1.2-.1-1.7z"
+              fill="#FF6FA6" />
+          </svg>
+        </div>
+
+        <h1 class="hero">Mohsin has a message for you</h1>
+        <p class="sub">Something special awaits...</p>
+
+        <button class="btn" id="viewBtn">Click to view <span class="arrow">→</span></button>
+      </div>
+    </section>
+
+    <!-- Page 2: Loading -->
+    <section class="page page-2" id="page2">
+      <div class="center">
+        <div class="loader-wrap">
+          <div class="loader">
+            <svg viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="32" stroke="#EFC6FF" stroke-width="10" fill="none" stroke-linecap="round" />
+            </svg>
+            <div class="loader-heart">❤</div>
+          </div>
+          <p class="loading-text">Thinking of all the reasons you're amazing...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 3: Message -->
+    <section class="page page-3" id="page3">
+      <canvas id="confetti-canvas"></canvas>
+
+      <div class="final-wrap">
+        <div class="small-pill">HAPPY BIRTHDAY</div>
+        <h2 class="final-title">A Melody for Your Soul's Celebration</h2>
+
+        <div class="card">
+          <p>In a world that often moves too fast, your presence remains a steady and gentle light. Your heart is
+            crafted from a kindness so rare it feels like a forgotten magic, a soft grace that touches every life you
+            encounter. You possess a goodness that is both profound and effortless, making the world a more beautiful
+            place just by existing within it.</p>
+
+          <p class="accent">I often find myself reflecting on how incredibly fortunate I am to walk this path with you.
+            To witness your spirit and share in your laughter is a privilege I hold close to my heart. You are my most
+            cherished companion, the one who brings a quiet peace to my days and a vibrant color to my dreams. My life
+            is infinitely richer because you are in it.</p>
+
+          <p>Today, 5th January, we celebrate you, <strong>Taha</strong>. You are kind and brilliantly intelligent —
+            someone who listens with care and makes every conversation a joy. I love talking to you and feel so good
+            when you’re around; I’ve never met anyone like you. Wishing you a birthday filled with happiness, success,
+            and all the warmth you share with others.</p>
+
+          <div class="signature">With all my love and gratitude, <span class="sign">Mohsin</span></div>
+        </div>
+
+        <div class="icons">
+          <div class="dot">✨</div>
+          <div class="dot">💜</div>
+          <div class="dot">💍</div>
+          <div class="dot">🌸</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
