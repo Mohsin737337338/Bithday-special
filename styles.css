@@ -1,0 +1,71 @@
+:root{
+  --bg-1: #faf6ff;
+  --light-purple: #f3e8ff;
+  --accent1: #8a4fff;
+  --accent2: #d6a8ff;
+  --muted: #8b7b9e;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Merriweather', serif;
+  background: radial-gradient(ellipse at left, rgba(163,120,255,0.12) 0%, rgba(0,0,0,0) 40%), radial-gradient(ellipse at right, rgba(163,120,255,0.08) 0%, rgba(0,0,0,0) 40%), linear-gradient(180deg,#fffafa 0%, #f8f5ff 100%);
+  color:#22203a;
+  -webkit-font-smoothing:antialiased;
+}
+
+.topbar{height:46px; background:#222; color:#fff; display:flex; align-items:center;}
+.topbar-inner{margin:0 auto; font-size:13px; opacity:0.92}
+
+main{min-height:calc(100vh - 46px)}
+
+.page{display:none; align-items:center; justify-content:center; min-height:calc(100vh - 46px); padding:60px 20px; position:relative}
+.page.active{display:flex}
+
+.center{text-align:center; width:100%; max-width:980px; margin:0 auto}
+
+.icon-circle{background:linear-gradient(180deg,#fff,#f9f7ff); width:96px; height:96px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 18px; box-shadow: 0 18px 30px rgba(129,86,255,0.08);}
+
+.hero{font-family:'Merriweather', serif; font-weight:700; font-size:46px; margin:12px 0 6px; color:#2b2236; letter-spacing: -0.6px}
+.sub{color:var(--muted); font-style:italic; margin-bottom:28px}
+
+.btn{background:linear-gradient(90deg,var(--accent1), var(--accent2)); border:none; color:white; padding:15px 34px; border-radius:34px; cursor:pointer; font-weight:600; font-family: 'Montserrat', sans-serif; box-shadow: 0 20px 32px rgba(138,79,255,0.12); font-size:16px}
+.btn .arrow{margin-left:10px}
+.btn:active{transform:translateY(1px)}
+
+/* Page 2 - loader */
+.loader-wrap{display:flex; flex-direction:column; align-items:center; gap:18px}
+.loader{width:120px; height:120px; display:flex; align-items:center; justify-content:center; position:relative}
+.loader svg{width:100%; height:100%; transform:rotate(-50deg)}
+.loader svg circle{stroke-dasharray:200; stroke-dashoffset:160; transform-origin:center; animation:spin 2s linear infinite}
+@keyframes spin{0%{stroke-dashoffset:200}100%{stroke-dashoffset:0}}
+.loader-heart{position:absolute; font-size:22px; color:#e19cff; animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.15)}100%{transform:scale(1)}}
+.loading-text{color: #b78ad8; font-style:italic}
+
+/* Page 3 - final */
+#confetti-canvas{position:fixed; left:0; top:46px; width:100%; height:calc(100% - 46px); pointer-events:none; z-index:2}
+.final-wrap{position:relative; z-index:3; margin-top:20px; text-align:center; padding:40px 20px}
+.small-pill{display:inline-block; background:rgba(216,179,255,0.25); color:#6a2bdc; padding:9px 18px; border-radius:28px; font-weight:600; font-size:12px; letter-spacing:1.2px}
+.final-title{font-family:'Great Vibes', cursive; font-size:48px; color:#b34bdc; margin:20px 0 36px}
+
+.card{background:linear-gradient(180deg,#fff,#fffdfc); max-width:650px; margin:0 auto; padding:34px 38px; border-radius:20px; box-shadow:0 20px 40px rgba(139,93,198,0.06); text-align:left; font-size:16px; line-height:1.66; color:#2e2640}
+.card .accent{color:#6f3bb7}
+.signature{margin-top:22px; text-align:right; color:#8e6aa9; font-style:italic}
+.signature .sign{display:block; font-family:'Great Vibes', cursive; font-size:20px; color:#9c40d6}
+
+.icons{display:flex; gap:14px; justify-content:center; margin-top:22px}
+.icons .dot{background:linear-gradient(180deg,#fff,#f6f0ff); padding:10px 14px; border-radius:12px; box-shadow: 0 6px 20px rgba(149,97,241,0.07); font-size:20px}
+
+/* subtle side gradients to mimic lighting */
+.page-3::before, .page-1::before{content:''; position:absolute; left:-8%; top:0; bottom:0; width:45%; background:radial-gradient(ellipse at left, rgba(156,90,214,0.12), transparent 40%); z-index:0}
+.page-3::after, .page-1::after{content:''; position:absolute; right:-8%; top:0; bottom:0; width:45%; background:radial-gradient(ellipse at right, rgba(213,162,255,0.08), transparent 40%); z-index:0}
+
+/* responsiveness */
+@media (max-width:720px){
+  .hero{font-size:28px}
+  .final-title{font-size:32px}
+  .card{padding:24px}
+}
